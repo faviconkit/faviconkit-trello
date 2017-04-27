@@ -1,9 +1,15 @@
 TrelloPowerUp.initialize({
   'card-badges' : function(t, card) {
-    console.log(card);
-    return [{
-      icon: 'https://api.faviconkit.com/icons/apple.com/144.png'
-    }]
+    t.card('attachments').then(function(attachments){
+      if(!attachments || !attachments.length) return;
+
+      return attachments.map(function(attachment){
+        var url = new URL(attachment.url);
+        return {
+          icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/144.png'
+        }
+      });
+    })
   },
 
   'format-url' : function(t, options) {
