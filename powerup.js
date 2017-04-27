@@ -2,7 +2,7 @@ TrelloPowerUp.initialize({
   'card-badges' : function(t, card) {
     t.card('attachments').then(function(attachments){
       console.log(attachments);
-      if(!attachments || !attachments.length) return;
+      if(!attachments || !attachments.length) return [];
 
       return attachments.map(function(attachment){
         var url = new window.URL(attachment.url);
