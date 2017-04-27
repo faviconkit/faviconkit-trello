@@ -1,5 +1,6 @@
 TrelloPowerUp.initialize({
   'card-badges' : function(t, card) {
+    console.log(card);
     return [{
       icon: 'https://api.faviconkit.com/icons/apple.com/144.png'
     }]
