@@ -1,21 +1,25 @@
 TrelloPowerUp.initialize({
   'card-badges' : function(t, card) {
-    t.card('attachments').then(function(attachments){
-      console.log(attachments);
+    return t.card('attachments')
+     .get('attachments')
+     .then(function(attachments) {
       if(!attachments || !attachments.length) return [];
 
       return attachments.map(function(attachment){
-        var url = new window.URL(attachment.url);
+        var url = new URL(attachment.url);
+        //console.log('card-badges', url);
         return {
-          icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/144.png'
+          icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/16.png'
         }
       });
     })
   },
 
   'format-url' : function(t, options) {
+    var url = new URL(options.url);
+    console.log('format-url', url);
     return {
-      icon: 'https://api.faviconkit.com/icons/apple.com/144.png',
+      icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/16.png',
       text: options.url
     }
   }
