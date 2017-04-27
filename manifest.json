@@ -1,0 +1,17 @@
+{
+  "name": "FaviconKit",
+  "details": "[FaviconKit](https://FaviconKit.com) is awesome because it can...",
+  "icon": {
+    "url": "https://api.faviconkit.com/icons/apple.com/144.png"
+  },
+  "author": "Andreas Pizsa",
+  "capabilities": [
+    "card-badges",
+    "format-url"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./iframe.html"
+    }
+  }
+}
