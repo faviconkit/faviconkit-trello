@@ -9,7 +9,7 @@ TrelloPowerUp.initialize({
         var url = new URL(attachment.url);
         //console.log('card-badges', url);
         return {
-          icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/16.png'
+          icon: 'https://api.faviconkit.com/' + url.hostname + '/32'
         }
       });
     })
@@ -19,7 +19,7 @@ TrelloPowerUp.initialize({
     var url = new URL(options.url);
     console.log('format-url', url);
     return {
-      icon: 'https://api.faviconkit.com/icons/' + url.hostname + '/16.png',
+      icon: 'https://api.faviconkit.com/' + url.hostname + '/32',
       text: options.url
     }
   }

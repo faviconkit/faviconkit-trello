@@ -2,7 +2,7 @@
   "name": "FaviconKit",
   "details": "[FaviconKit](https://FaviconKit.com) is awesome because it can...",
   "icon": {
-    "url": "https://api.faviconkit.com/icons/apple.com/144.png"
+    "url": "https://api.faviconkit.com/apple.com/144"
   },
   "author": "Andreas Pizsa",
   "capabilities": [
