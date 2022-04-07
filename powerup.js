@@ -3,13 +3,11 @@ TrelloPowerUp.initialize({
     return t.card('attachments')
      .get('attachments')
      .then(function(attachments) {
-      if(!attachments || !attachments.length) return [];
-
-      return attachments.map(function(attachment){
+      return (attachments || []).map(function(attachment){
         var url = new URL(attachment.url);
-        //console.log('card-badges', url);
         return {
-          icon: 'https://api.faviconkit.com/' + url.hostname + '/32'
+          icon: 'https://api.faviconkit.com/' + url.hostname + '/32',
+          color: null
         }
       });
     })
